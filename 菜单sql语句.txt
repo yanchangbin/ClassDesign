@@ -1,0 +1,587 @@
+truncate table sys_menu;
+
+insert into sys_menu values('11','控制台','0','1','#','menuItem','M','0','','fa fa-gear','itbo',now(),'itbo',now(),'控制台管理目录');
+
+insert into sys_menu values('1101','核心数据','11','1','/system/main','menuItem','C','0','system:main:view','fa fa-address-book','itbo',now(),'itbo',now(),'核心数据展示菜单');
+
+insert into sys_menu values('1102','物联网数据','11','2','#','menuItem','M','0','','fa fa-video-camera','itbo',now(),'itbo',now(),'物联网数据展示目录');
+
+insert into sys_menu values('110201','安防数据','1102','1','/iot/secpannel','menuItem','C','0','iot:secpannel:view','fa fa-address-book','itbo',now(),'itbo',now(),'安防数据展示菜单');
+insert into sys_menu values('110202','环境数据','1102','2','/iot/milpannel','menuItem','C','0','iot:milpannel:view','fa fa-address-book','itbo',now(),'itbo',now(),'环境数据展示菜单');
+insert into sys_menu values('110203','能源数据','1102','3','/iot/engpannel','menuItem','C','0','iot:engpannel:view','fa fa-address-book','itbo',now(),'itbo',now(),'能源数据展示菜单');
+insert into sys_menu values('110204','土壤数据','1102','4','/iot/soilpannel','menuItem','C','0','iot:soilpannel:view','fa fa-address-book','itbo',now(),'itbo',now(),'土壤数据展示菜单');
+insert into sys_menu values('110205','水质数据','1102','5','/iot/waterpannel','menuItem','C','0','iot:waterpannel:view','fa fa-address-book','itbo',now(),'itbo',now(),'水质数据展示菜单');
+insert into sys_menu values('110206','气象数据','1102','6','/iot/metpannel','menuItem','C','0','iot:metpannel:view','fa fa-address-book','itbo',now(),'itbo',now(),'气象数据展示菜单');
+
+insert into sys_menu values('1103','广播数据','11','3','/broad/pannel','menuItem','C','0','broad:pannel:view','fa fa-address-book','itbo',now(),'itbo',now(),'广播数据展示菜单');
+insert into sys_menu values('1104','村务数据','11','4','/village/pannel','menuItem','C','0','village:pannel:view','fa fa-bullhorn','itbo',now(),'itbo',now(),'村务数据展示菜单');
+insert into sys_menu values('1105','摄相头数据','11','5','/broad/camera','menuItem','C','0','broad:camera:view','fa fa-bullhorn','itbo',now(),'itbo',now(),'摄相头数据展示菜单');
+
+insert into sys_menu values('12','数据管理','0','2','#','menuItem','M','0','','fa fa-video-camera','itbo',now(),'itbo',now(),'数据管理目录');
+
+insert into sys_menu values('1201','数据接口','12','1','#','menuItem','M','0','','fa fa-video-camera','itbo',now(),'itbo',now(),'接口管理目录');
+
+insert into sys_menu values('120101','移动设备','1201','1','/system/mobile','menuItem','C','0','system:mobile:view','fa fa-address-book','itbo',now(),'itbo',now(),'移动设备接口展示菜单');
+
+insert into sys_menu values('120102','流媒体直播','1201','2','/system/media','menuItem','C','0','system:media:view','fa fa-address-book','itbo',now(),'itbo',now(),'流媒体直播接口展示菜单');
+
+insert into sys_menu values('120103','短信直播','1201','3','/system/smslive','menuItem','C','0','system:smslive:view','fa fa-address-book','itbo',now(),'itbo',now(),'短信直播接口展示菜单');
+
+insert into sys_menu values('1202','用户管理','12','2','/system/user','menuItem','C','0','system:user:view','fa fa-address-book','itbo',now(),'itbo',now(),'用户管理展示菜单');
+insert into sys_menu values('120201', '用户查询', 1202, 1, '#','menuItem','F', '0', 'system:user:list', '#', 'itbo',now(),'itbo',now(), '用户查询按钮');
+insert into sys_menu values('120202', '用户新增', 1202, 2, '#','menuItem','F', '0', 'system:user:add', '#','itbo',now(),'itbo',now(), '用户新增按钮');
+insert into sys_menu values('120203', '用户修改', 1202, 3, '#','menuItem','F', '0', 'system:user:edit', '#','itbo',now(),'itbo',now(), '用户修改按钮');
+insert into sys_menu values('120204', '用户删除', 1202, 4, '#','menuItem','F', '0', 'system:user:remove', '#','itbo',now(),'itbo',now(), '用户删除按钮');
+insert into sys_menu values('120205', '用户导出', 1202, 5, '#','menuItem','F', '0', 'system:user:export', '#','itbo',now(),'itbo',now(), '用户导出按钮');
+insert into sys_menu values('120206', '重置密码', 1202, 6, '#','menuItem','F', '0', 'system:user:resetPwd', '#','itbo',now(),'itbo',now(), '重置密码按钮');
+
+insert into sys_menu values('1203','角色管理','12','3','/system/role','menuItem','C','0','system:role:view','fa fa-address-book','itbo',now(),'itbo',now(),'角色管理展示菜单');
+insert into sys_menu values('120301', '角色查询','1203', 1, '#','menuItem','F', '0', 'system:role:list', '#','itbo',now(),'itbo',now(),'角色查询按钮');
+insert into sys_menu values('120302', '角色新增','1203', 2, '#','menuItem','F', '0', 'system:role:add', '#','itbo',now(),'itbo',now(),'角色新增按钮');
+insert into sys_menu values('120303', '角色修改','1203', 3, '#','menuItem','F', '0', 'system:role:edit', '#','itbo',now(),'itbo',now(),'角色修改按钮');
+insert into sys_menu values('120304', '角色删除','1203', 4, '#','menuItem','F', '0', 'system:role:remove', '#','itbo',now(),'itbo',now(),'角色删除按钮');
+insert into sys_menu values('120305', '角色导出','1203', 5, '#','menuItem','F', '0', 'system:role:export', '#','itbo',now(),'itbo',now(),'角色导出按钮');
+
+insert into sys_menu values('1204','菜单管理','12','4','/system/menu','menuItem','C','0','system:menu:view','fa fa-address-book','itbo',now(),'itbo',now(),'菜单管理展示菜单');
+insert into sys_menu values('120401','菜单查询','1204', 1, '#','menuItem','F', '0', 'system:menu:list', '#','itbo',now(),'itbo',now(),'菜单查询按钮');
+insert into sys_menu values('120402','菜单新增','1204', 2, '#','menuItem','F', '0', 'system:menu:add', '#','itbo',now(),'itbo',now(),'菜单新增按钮');
+insert into sys_menu values('120403','菜单修改','1204', 3, '#','menuItem','F', '0', 'system:menu:edit', '#','itbo',now(),'itbo',now(),'菜单修改按钮');
+insert into sys_menu values('120404','菜单删除','1204', 4, '#','menuItem','F', '0', 'system:menu:remove', '#','itbo',now(),'itbo',now(),'菜单删除按钮');
+
+insert into sys_menu values('13', '村务管理','0','3','#','menuItem','M','0','','fa fa-address-book','itbo',now(),'itbo',now(),'村务管理目录');
+
+insert into sys_menu values('1301','我的工作','13','1','#','menuItem','M','0','','fa fa-video-camera','itbo',now(),'itbo',now(),'我的工作管理目录');
+
+insert into sys_menu values('130101','工作记录','1301','1','/village/worklog','menuItem','C','0','village:worklog:view','fa fa-address-book','itbo',now(),'itbo',now(),'工作记录展示菜单');
+insert into sys_menu values('13010101', '工作记录查询','130101', 1,'#','menuItem','F','0', 'village:worklog:list','fa fa-address-book','itbo',now(),'itbo',now(), '工作记录查询按钮');
+insert into sys_menu values('13010102', '工作记录新增','130101', 2,'#','menuItem','F','0', 'village:worklog:add','fa fa-address-book','itbo',now(),'itbo',now(), '工作记录新增按钮');
+insert into sys_menu values('13010103', '工作记录修改','130101', 3,'#','menuItem','F','0', 'village:worklog:edit','fa fa-address-book','itbo',now(),'itbo',now(), '工作记录修改按钮');
+insert into sys_menu values('13010104', '工作记录删除','130101', 4,'#','menuItem','F','0', 'village:worklog:remove','fa fa-address-book','itbo',now(),'itbo',now(), '工作记录删除按钮');
+
+insert into sys_menu values('130102','备忘录','1301','2','/village/memorial','menuItem','C','0','village:memorial:view','fa fa-address-book','itbo',now(),'itbo',now(),'备忘录展示菜单');
+insert into sys_menu values(13010201, '备忘录查询', 130102, 1, '#','menuItem','F', '0', 'village:memorial:list', 'fa fa-address-book','itbo',now(),'itbo',now(), '备忘录查询按钮');
+insert into sys_menu values(13010202, '备忘录新增', 130102, 2, '#','menuItem','F', '0', 'village:memorial:add', 'fa fa-address-book','itbo',now(),'itbo',now(), '备忘录新增按钮');
+insert into sys_menu values(13010203, '备忘录修改', 130102, 3, '#','menuItem','F', '0', 'village:memorial:edit', 'fa fa-address-book','itbo',now(),'itbo',now(),'备忘录修改按钮');
+insert into sys_menu values(13010204, '备忘录删除', 130102, 4, '#','menuItem','F', '0', 'village:memorial:remove', 'fa fa-address-book','itbo',now(),'itbo',now(),'备忘录删除按钮');
+
+insert into sys_menu values('130103','村情资讯','1301','3','/village/meeting','menuItem','C','0','village:meeting:view','fa fa-address-book','itbo',now(),'itbo',now(),'村情资讯展示菜单');
+insert into sys_menu values(13010301, '会议记录查询', 130103, 1, '#','menuItem','F', '0', 'village:meeting:list','fa fa-address-book','itbo',now(),'itbo',now(), '会议记录查询按钮');
+insert into sys_menu values(13010302, '会议记录新增', 130103, 2, '#','menuItem','F', '0', 'village:meeting:add','fa fa-address-book','itbo',now(),'itbo',now(), '会议记录新增按钮');
+insert into sys_menu values(13010303, '会议记录修改', 130103, 3, '#','menuItem','F', '0', 'village:meeting:edit','fa fa-address-book','itbo',now(),'itbo',now(),'会议记录修改按钮');
+insert into sys_menu values(13010304, '会议记录删除', 130103, 4, '#','menuItem','F', '0', 'village:meeting:remove','fa fa-address-book','itbo',now(),'itbo',now(),'会议记录删除按钮');
+
+insert into sys_menu values('130104','我的建议','1301','4','/village/suggest','menuItem','C','0','village:suggest:view','fa fa-address-book','itbo',now(),'itbo',now(),'我的建议展示菜单');
+insert into sys_menu values('13010401', '我的建议查询','130104', 1, '#','menuItem','F','0','village:suggest:list','fa fa-address-book','itbo',now(),'itbo',now(),'我的建议查询按钮');
+insert into sys_menu values('13010402', '我的建议新增','130104', 2, '#','menuItem','F','0','village:suggest:add','fa fa-address-book','itbo',now(),'itbo',now(),'我的建议新增按钮');
+insert into sys_menu values('13010403', '我的建议修改','130104', 3, '#','menuItem','F','0','village:suggest:edit','fa fa-address-book','itbo',now(),'itbo',now(),'我的建议修改按钮');
+insert into sys_menu values('13010404', '我的建议删除','130104', 4, '#','menuItem','F','0','village:suggest:remove','fa fa-address-book','itbo',now(),'itbo',now(),'我的建议删除按钮');
+
+insert into sys_menu values('130105','我的文件夹','1301','5','/village/fileinfo','menuItem','C','0','village:fileinfo:view','fa fa-address-book','itbo',now(),'itbo',now(),'我的文件夹展示菜单');
+insert into sys_menu values('13010501', '文件夹管理查询','130105', 1, '#','menuItem','F', '0', 'village:fileinfo:list','fa fa-address-book','itbo',now(),'itbo',now(),'文件夹管理查询按钮');
+insert into sys_menu values('13010502', '文件夹管理新增','130105', 2, '#','menuItem','F', '0', 'village:fileinfo:add','fa fa-address-book','itbo',now(),'itbo',now(),'文件夹管理新增按钮');
+insert into sys_menu values('13010503', '文件夹管理修改','130105', 3, '#','menuItem','F', '0', 'village:fileinfo:edit','fa fa-address-book','itbo',now(),'itbo',now(),'文件夹管理修改按钮');
+insert into sys_menu values('13010504', '文件夹管理删除','130105', 4, '#','menuItem','F', '0', 'village:fileinfo:remove','fa fa-address-book','itbo',now(),'itbo',now(),'文件夹管理删除按钮');
+
+insert into sys_menu values('1302','数据管理','13','2','#','menuItem','M','0','','fa fa-video-camera','itbo',now(),'itbo',now(),'数据管理目录');
+
+insert into sys_menu values('130201','村民信息','1302','1','/village/villagerInfo','menuItem','C','0','village:villagerInfo:view','fa fa-address-book','itbo',now(),'itbo',now(),'村民信息展示菜单');
+insert into sys_menu values('13020101', '村民查询','130201', 1, '#','menuItem','F', '0', 'village:villagerInfo:list', '#','itbo',now(),'itbo',now(),'村民查询按钮');
+insert into sys_menu values('13020102', '村民新增','130201', 2, '#','menuItem','F', '0', 'village:villagerInfo:add', '#','itbo',now(),'itbo',now(),'村民新增按钮');
+insert into sys_menu values('13020103', '村民修改','130201', 3, '#','menuItem','F', '0', 'village:villagerInfo:edit', '#','itbo',now(),'itbo',now(),'村民修改按钮');
+insert into sys_menu values('13020104', '村民删除','130201', 4, '#','menuItem','F', '0', 'village:villagerInfo:remove', '#','itbo',now(),'itbo',now(),'村民删除按钮');
+
+insert into sys_menu values('130202','企业信息','1302','2','/village/company','menuItem','C','0','village:company:view','fa fa-address-book','itbo',now(),'itbo',now(),'企业信息展示菜单');
+insert into sys_menu values('13020201', '企业查询','130202', 1, '#','menuItem','F', '0', 'village:company:list', '#','itbo',now(),'itbo',now(),'企业查询按钮');
+insert into sys_menu values('13020202', '企业新增','130202', 2, '#','menuItem','F', '0', 'village:company:add', '#','itbo',now(),'itbo',now(),'企业新增按钮');
+insert into sys_menu values('13020203', '企业修改','130202', 3, '#','menuItem','F', '0', 'village:company:edit', '#','itbo',now(),'itbo',now(),'企业修改按钮');
+insert into sys_menu values('13020204', '企业删除','130202', 4, '#','menuItem','F', '0', 'village:company:remove', '#','itbo',now(),'itbo',now(),'企业删除按钮');
+
+insert into sys_menu values('130203','村务信息','1302','3','/village/tbStaff','menuItem','C','0','village:tbStaff:view','fa fa-address-book','itbo',now(),'itbo',now(),'村务信息展示菜单');
+insert into sys_menu values('13020301','工作人员查询','130203', 1, '#','menuItem','F', '0', 'village:tbStaff:list', '#','itbo',now(),'itbo',now(),'工作人员查询按钮');
+insert into sys_menu values('13020302','工作人员增加','130203', 2, '#','menuItem','F', '0', 'village:tbStaff:add', '#','itbo',now(),'itbo',now(),'工作人员增加按钮');
+insert into sys_menu values('13020303','工作人员删除','130203', 3, '#','menuItem','F', '0', 'village:tbStaff:remove', '#','itbo',now(),'itbo',now(),'工作人员删除按钮');
+insert into sys_menu values('13020304','工作人员修改','130203', 4, '#','menuItem','F', '0', 'village:tbStaff:edit', '#','itbo',now(),'itbo',now(),'工作人员修改按钮');
+
+insert into sys_menu values('130204','数据分析','1302','4','/village/analysis','menuItem','C','0','village:analysis:view','fa fa-address-book','itbo',now(),'itbo',now(),'数据分析展示菜单');
+insert into sys_menu values('13020401','数据查询','130204', 1, '#','menuItem','F', '0', 'village:analysis:list', '#','itbo',now(),'itbo',now(),'数据查询按钮');
+
+insert into sys_menu values('1303','舆情管理','13','3','#','menuItem','M','0','','fa fa-video-camera','itbo',now(),'itbo',now(),'舆情管理目录');
+
+insert into sys_menu values('130301','舆情信息','1303','1','/village/yuqing','menuItem','C','0','village:yuqing:view','fa fa-address-book','itbo',now(),'itbo',now(),'舆情信息展示菜单');
+insert into sys_menu values('13030101','舆情上报查询','130301', 1, '#','menuItem','F', '0', 'village:yuqing:list', '#','itbo',now(),'itbo',now(),'舆情上报查询按钮');
+insert into sys_menu values('13030102','舆情上报新增','130301', 2, '#','menuItem','F', '0', 'village:yuqing:add', '#','itbo',now(),'itbo',now(),'舆情上报新增按钮');
+insert into sys_menu values('13030103','舆情上报修改','130301', 3, '#','menuItem','F', '0', 'village:yuqing:edit', '#','itbo',now(),'itbo',now(),'舆情上报修改按钮');
+insert into sys_menu values('13030104','舆情上报删除','130301', 4, '#','menuItem','F', '0', 'village:yuqing:remove', '#','itbo',now(),'itbo',now(),'舆情上报删除按钮');
+
+insert into sys_menu values('1304','项目管理','13','4','#','menuItem','M','0','','fa fa-video-camera','itbo',now(),'itbo',now(),'项目管理目录');
+
+insert into sys_menu values('130401','项目信息','1304','1','/village/project','menuItem','C','0','village:project:view','fa fa-address-book','itbo',now(),'itbo',now(),'项目信息展示菜单');
+insert into sys_menu values('13040101', '重大项目查询','130401', 1, '#','menuItem','F', '0', 'village:project:list', '#','itbo',now(),'itbo',now(),'重大项目查询按钮');
+insert into sys_menu values('13040102', '重大项目新增','130401', 2, '#','menuItem','F', '0', 'village:project:add', '#','itbo',now(),'itbo',now(),'重大项目新增按钮');
+insert into sys_menu values('13040103', '重大项目修改','130401', 3, '#','menuItem','F', '0', 'village:project:edit', '#','itbo',now(),'itbo',now(),'重大项目修改按钮');
+insert into sys_menu values('13040104', '重大项目删除','130401', 4, '#','menuItem','F', '0', 'village:project:remove', '#','itbo',now(),'itbo',now(),'重大项目删除按钮');
+
+insert into sys_menu values('1305','链接管理','13','5','#','menuItem','M','0','','fa fa-video-camera','itbo',now(),'itbo',now(),'链接管理目录');
+
+insert into sys_menu values('130501','链接信息','1305','1','/village/link','menuItem','C','0','village:link:view','fa fa-address-book','itbo',now(),'itbo',now(),'链接信息展示菜单');
+insert into sys_menu values('13050101','链接信息查询','130501', 1, '#','menuItem','F', '0', 'village:link:list', '#','itbo',now(),'itbo',now(),'链接信息查询按钮');
+insert into sys_menu values('13050102','链接信息新增','130501', 2, '#','menuItem','F', '0', 'village:link:add', '#','itbo',now(),'itbo',now(),'链接信息新增按钮');
+insert into sys_menu values('13050103','链接信息修改','130501', 3, '#','menuItem','F', '0', 'village:link:edit', '#','itbo',now(),'itbo',now(),'链接信息修改按钮');
+insert into sys_menu values('13050104','链接信息删除','130501', 4, '#','menuItem','F', '0', 'village:link:remove', '#','itbo',now(),'itbo',now(),'链接信息删除按钮');
+
+insert into sys_menu values('1306','界面管理','13','6','#','menuItem','M','0','','fa fa-video-camera','itbo',now(),'itbo',now(),'界面管理目录');
+
+insert into sys_menu values('130601','参数统计','1306','1','/village/statistics','menuItem','C','0','village:statistics:view','fa fa-address-book','itbo',now(),'itbo',now(),'参数统计展示菜单');
+
+insert into sys_menu values('130602','报警信息提示','1306','2','/village/message','menuItem','C','0','village:message:view','fa fa-address-book','itbo',now(),'itbo',now(),'报警信息提示展示菜单');
+
+insert into sys_menu values('1307','美丽乡村','13','7','#','menuItem','M','0','','fa fa-video-camera','itbo',now(),'itbo',now(),'美丽乡村目录');
+
+insert into sys_menu values('130701','乡村资讯','1307','1','/village/villageplan/7','menuItem','C','0','village:villageplan:view7','fa fa-address-book','itbo',now(),'itbo',now(),'乡村资讯展示菜单');
+insert into sys_menu values('13070101','乡村资讯查询','130701', 1, '#','menuItem','F', '0', 'village:villageplan:list7', '#','itbo',now(),'itbo',now(),'乡村资讯查询按钮');
+insert into sys_menu values('13070102','乡村资讯新增','130701', 2, '#','menuItem','F', '0', 'village:villageplan:add7', '#','itbo',now(),'itbo',now(),'乡村资讯新增按钮');
+insert into sys_menu values('13070103','乡村资讯修改','130701', 3, '#','menuItem','F', '0', 'village:villageplan:edit7', '#','itbo',now(),'itbo',now(),'乡村资讯修改按钮');
+insert into sys_menu values('13070104','乡村资讯删除','130701', 4, '#','menuItem','F', '0', 'village:villageplan:remove7', '#','itbo',now(),'itbo',now(),'乡村资讯删除按钮');
+
+insert into sys_menu values('130702','乡村规划','1307','2','/village/villageplan/1','menuItem','C','0','village:villageplan:view1','fa fa-address-book','itbo',now(),'itbo',now(),'乡村规划展示菜单');
+insert into sys_menu values('13070201','乡村规划查询','130702', 1, '#','menuItem','F', '0', 'village:villageplan:list1', '#','itbo',now(),'itbo',now(),'乡村规划查询按钮');
+insert into sys_menu values('13070202','乡村规划新增','130702', 2, '#','menuItem','F', '0', 'village:villageplan:add1', '#','itbo',now(),'itbo',now(),'乡村规划新增按钮');
+insert into sys_menu values('13070203','乡村规划修改','130702', 3, '#','menuItem','F', '0', 'village:villageplan:edit1', '#','itbo',now(),'itbo',now(),'乡村规划修改按钮');
+insert into sys_menu values('13070204','乡村规划删除','130702', 4, '#','menuItem','F', '0', 'village:villageplan:remove1', '#','itbo',now(),'itbo',now(),'乡村规划删除按钮');
+
+insert into sys_menu values('130703','我爱我村','1307','3','/village/villageplan/2','menuItem','C','0','village:villageplan:view2','fa fa-address-book','itbo',now(),'itbo',now(),'我爱我村展示菜单');
+insert into sys_menu values('13070301','我爱我村查询','130703', 1, '#','menuItem','F', '0', 'village:villageplan:list2', '#','itbo',now(),'itbo',now(),'我爱我村查询按钮');
+insert into sys_menu values('13070302','我爱我村新增','130703', 2, '#','menuItem','F', '0', 'village:villageplan:add2', '#','itbo',now(),'itbo',now(),'我爱我村新增按钮');
+insert into sys_menu values('13070303','我爱我村修改','130703', 3, '#','menuItem','F', '0', 'village:villageplan:edit2', '#','itbo',now(),'itbo',now(),'我爱我村修改按钮');
+insert into sys_menu values('13070304','我爱我村删除','130703', 4, '#','menuItem','F', '0', 'village:villageplan:remove2', '#','itbo',now(),'itbo',now(),'我爱我村删除按钮');
+
+insert into sys_menu values('130704','文化活动','1307','4','/village/villageplan/3','menuItem','C','0','village:villageplan:view3','fa fa-address-book','itbo',now(),'itbo',now(),'文化活动展示菜单');
+insert into sys_menu values('13070401','文化活动查询','130704', 1, '#','menuItem','F', '0', 'village:villageplan:list3', '#','itbo',now(),'itbo',now(),'文化活动查询按钮');
+insert into sys_menu values('13070402','文化活动新增','130704', 2, '#','menuItem','F', '0', 'village:villageplan:add3', '#','itbo',now(),'itbo',now(),'文化活动新增按钮');
+insert into sys_menu values('13070403','文化活动修改','130704', 3, '#','menuItem','F', '0', 'village:villageplan:edit3', '#','itbo',now(),'itbo',now(),'文化活动修改按钮');
+insert into sys_menu values('13070404','文化活动删除','130704', 4, '#','menuItem','F', '0', 'village:villageplan:remove3', '#','itbo',now(),'itbo',now(),'文化活动删除按钮');
+
+insert into sys_menu values('130705','旅游.休闲.农家乐','1307','5','/village/villageplan/4','menuItem','C','0','village:villageplan:view4','fa fa-address-book','itbo',now(),'itbo',now(),'旅游.休闲.农家乐展示菜单');
+insert into sys_menu values('13070501','休闲乐查询','130705', 1, '#','menuItem','F', '0', 'village:villageplan:list4', '#','itbo',now(),'itbo',now(),'休闲乐查询按钮');
+insert into sys_menu values('13070502','休闲乐新增','130705', 2, '#','menuItem','F', '0', 'village:villageplan:add4', '#','itbo',now(),'itbo',now(),'休闲乐新增按钮');
+insert into sys_menu values('13070503','休闲乐修改','130705', 3, '#','menuItem','F', '0', 'village:villageplan:edit4', '#','itbo',now(),'itbo',now(),'休闲乐修改按钮');
+insert into sys_menu values('13070504','休闲乐删除','130705', 4, '#','menuItem','F', '0', 'village:villageplan:remove4', '#','itbo',now(),'itbo',now(),'休闲乐删除按钮');
+
+insert into sys_menu values('130706','民宿管理','1307','6','/village/villageplan/5','menuItem','C','0','village:villageplan:view5','fa fa-address-book','itbo',now(),'itbo',now(),'民宿管理展示菜单');
+insert into sys_menu values('13070601','民宿管理查询','130706', 1, '#','menuItem','F', '0', 'village:villageplan:list5', '#','itbo',now(),'itbo',now(),'民宿管理查询按钮');
+insert into sys_menu values('13070602','民宿管理新增','130706', 2, '#','menuItem','F', '0', 'village:villageplan:add5', '#','itbo',now(),'itbo',now(),'民宿管理新增按钮');
+insert into sys_menu values('13070603','民宿管理修改','130706', 3, '#','menuItem','F', '0', 'village:villageplan:edit5', '#','itbo',now(),'itbo',now(),'民宿管理修改按钮');
+insert into sys_menu values('13070604','民宿管理删除','130706', 4, '#','menuItem','F', '0', 'village:villageplan:remove5', '#','itbo',now(),'itbo',now(),'民宿管理删除按钮');
+
+insert into sys_menu values('130707','宣传方案','1307','7','/village/villageplan/6','menuItem','C','0','village:villageplan:view6','fa fa-address-book','itbo',now(),'itbo',now(),'宣传方案展示菜单');
+insert into sys_menu values('13070701','宣传方案查询','130707', 1, '#','menuItem','F', '0', 'village:villageplan:list6', '#','itbo',now(),'itbo',now(),'宣传方案查询按钮');
+insert into sys_menu values('13070702','宣传方案新增','130707', 2, '#','menuItem','F', '0', 'village:villageplan:add6', '#','itbo',now(),'itbo',now(),'宣传方案新增按钮');
+insert into sys_menu values('13070703','宣传方案修改','130707', 3, '#','menuItem','F', '0', 'village:villageplan:edit6', '#','itbo',now(),'itbo',now(),'宣传方案修改按钮');
+insert into sys_menu values('13070704','宣传方案删除','130707', 4, '#','menuItem','F', '0', 'village:villageplan:remove6', '#','itbo',now(),'itbo',now(),'宣传方案删除按钮');
+
+insert into sys_menu values('1308','党建管理','13','8','#','menuItem','M','0','','fa fa-video-camera','itbo',now(),'itbo',now(),'党建管理目录');
+
+insert into sys_menu values('130801','党建新闻','1308','1','/village/partynew','menuItem','C','0','village:partynew:view','fa fa-address-book','itbo',now(),'itbo',now(),'党建新闻展示菜单');
+insert into sys_menu values('13080101','党员新闻查询','130801', 1, '#','menuItem','F', '0', 'village:partynew:list', '#','itbo',now(),'itbo',now(),'党员新闻查询按钮');
+insert into sys_menu values('13080102','党员新闻新增','130801', 2, '#','menuItem','F', '0', 'village:partynew:add', '#','itbo',now(),'itbo',now(),'党员新闻新增按钮');
+insert into sys_menu values('13080103','党员新闻修改','130801', 3, '#','menuItem','F', '0', 'village:partynew:edit', '#','itbo',now(),'itbo',now(),'党员新闻修改按钮');
+insert into sys_menu values('13080104','党员新闻删除','130801', 4, '#','menuItem','F', '0', 'village:partynew:remove', '#','itbo',now(),'itbo',now(),'党员新闻删除按钮');
+
+insert into sys_menu values('130802','党员学习','1308','2','/village/partystudy','menuItem','C','0','village:partystudy:view','fa fa-address-book','itbo',now(),'itbo',now(),'党员学习展示菜单');
+insert into sys_menu values('13080201', '党员学习查询','130802', 1, '#','menuItem','F', '0', 'village:partystudy:list', '#','itbo',now(),'itbo',now(),'党员学习查询按钮');
+insert into sys_menu values('13080202', '党员学习新增','130802', 2, '#','menuItem','F', '0', 'village:partystudy:add', '#','itbo',now(),'itbo',now(),'党员学习新增按钮');
+insert into sys_menu values('13080203', '党员学习修改','130802', 3, '#','menuItem','F', '0', 'village:partystudy:edit', '#', 'itbo',now(),'itbo',now(),'党员学习修改按钮');
+insert into sys_menu values('13080204', '党员学习删除','130802', 4, '#','menuItem','F', '0', 'village:partystudy:remove', '#','itbo',now(),'itbo',now(),'党员学习删除按钮');
+
+insert into sys_menu values('130803','党员活动','1308','3','/village/tbHuodong','menuItem','C','0','village:tbHuodong:view','fa fa-address-book','itbo',now(),'itbo',now(),'党员活动展示菜单');
+insert into sys_menu values('13080301', '党员活动查询','130803', 1, '#','menuItem','F', '0', 'village:tbHuodong:add', '#','itbo',now(),'itbo',now(),'党员活动查询按钮');
+insert into sys_menu values('13080302', '党员活动添加','130803', 2, '#','menuItem','F', '0', 'village:tbHuodong:add', '#','itbo',now(),'itbo',now(),'党员活动添加按钮');
+insert into sys_menu values('13080303', '党员活动修改','130803', 3, '#','menuItem','F', '0', 'village:tbHuodong:edit', '#','itbo',now(),'itbo',now(),'党员活动修改按钮');
+insert into sys_menu values('13080304', '党员活动删除','130803', 4, '#','menuItem','F', '0', 'village:tbHuodong:remove', '#','itbo',now(),'itbo',now(),'党员活动删除按钮');
+
+insert into sys_menu values('130804','党员信息','1308','4','/village/partymember','menuItem','C','0','village:partymember:view','fa fa-address-book','itbo',now(),'itbo',now(),'党员信息展示菜单');
+insert into sys_menu values('13080401','党员信息查询','130804', 1, '#','menuItem', 'F', '0', 'village:partymember:list', '#','itbo',now(),'itbo',now(),'党员信息查询按钮');
+insert into sys_menu values('13080402','党员信息新增','130804', 2, '#','menuItem', 'F', '0', 'village:partymember:add', '#','itbo',now(),'itbo',now(),'党员信息新增按钮');
+insert into sys_menu values('13080403','党员信息修改','130804', 3, '#','menuItem', 'F', '0', 'village:partymember:edit', '#','itbo',now(),'itbo',now(),'党员信息修改按钮');
+insert into sys_menu values('13080404','党员信息删除','130804', 4, '#','menuItem', 'F', '0', 'village:partymember:remove', '#','itbo',now(),'itbo',now(),'党员信息删除按钮');
+
+insert into sys_menu values('130805','扶贫工作','1308','5','/village/partyfupin','menuItem','C','0','village:partyfupin:view','fa fa-address-book','itbo',now(),'itbo',now(),'扶贫工作展示菜单');
+insert into sys_menu values('13080501','扶贫工作查询','130805',1,'#','menuItem', 'F', '0', 'village:partyfupin:list', '#','itbo',now(),'itbo',now(),'扶贫工作查询按钮');
+insert into sys_menu values('13080502','扶贫工作新增','130805',2,'#','menuItem', 'F', '0', 'village:partyfupin:add', '#','itbo',now(),'itbo',now(),'扶贫工作新增按钮');
+insert into sys_menu values('13080503','扶贫工作修改','130805',3,'#','menuItem', 'F', '0', 'village:partyfupin:edit', '#','itbo',now(),'itbo',now(),'扶贫工作修改按钮');
+insert into sys_menu values('13080504','扶贫工作删除','130805',4,'#','menuItem', 'F', '0', 'village:partyfupin:remove', '#','itbo',now(),'itbo',now(),'扶贫工作删除按钮');
+
+insert into sys_menu values('130806','党员值班','1308','6','/village/partywork','menuItem','C','0','village:partywork:view','fa fa-address-book','itbo',now(),'itbo',now(),'党员值班展示菜单');
+insert into sys_menu values('13080601', '党员值班查询','130806', 1, '#','menuItem','F', '0', 'village:partywork:list', '#','itbo',now(),'itbo',now(),'党员值班查询按钮');
+insert into sys_menu values('13080602', '党员值班新增','130806', 2, '#','menuItem','F', '0', 'village:partywork:add', '#','itbo',now(),'itbo',now(),'党员值班新增按钮');
+insert into sys_menu values('13080603', '党员值班修改','130806', 3, '#','menuItem','F', '0', 'village:partywork:edit', '#','itbo',now(),'itbo',now(),'党员值班修改按钮');
+insert into sys_menu values('13080604', '党员值班删除','130806', 4, '#','menuItem','F', '0', 'village:partywork:remove', '#','itbo',now(),'itbo',now(),'党员值班删除按钮');
+
+insert into sys_menu values('1309','村务宝典','13','9','#','menuItem','M','0','','fa fa-video-camera','itbo',now(),'itbo',now(),'村务宝典管理目录');
+
+insert into sys_menu values('130901','资产清查','1309','1','/village/assetAssessment','menuItem','C','0','village:assetAssessment:view','fa fa-address-book','itbo',now(),'itbo',now(),'资产清查展示菜单');
+insert into sys_menu values('13090101','资产清查查询','130901', 1, '#','menuItem','F', '0','village:assetAssessment:list','#','itbo',now(),'itbo',now(),'资产清查查询按钮');
+insert into sys_menu values('13090102', '资产清查新增','130901', 2, '#','menuItem','F', '0', 'village:assetAssessment:add', '#','itbo',now(),'itbo',now(),'资产清查新增按钮');
+insert into sys_menu values('13090103', '资产清查修改','130901', 3, '#','menuItem','F', '0', 'village:assetAssessment:edit', '#','itbo',now(),'itbo',now(),'资产清查修改按钮');
+insert into sys_menu values('13090104', '资产清查删除','130901', 4, '#','menuItem','F', '0', 'village:assetAssessment:remove', '#','itbo',now(),'itbo',now(),'资产清查删除按钮');
+
+insert into sys_menu values('130902','林地管理','1309','2','/village/forestlandInfo','menuItem','C','0','village:forestlandInfo:view','fa fa-address-book','itbo',now(),'itbo',now(),'林地管理展示菜单');
+insert into sys_menu values('13090201', '林地查询','130902', 1, '#','menuItem','F', '0', 'village:forestlandInfo:list', '#','itbo',now(),'itbo',now(),'林地查询按钮');
+insert into sys_menu values('13090202', '林地新增','130902', 2, '#','menuItem','F', '0', 'village:forestlandInfo:add', '#','itbo',now(),'itbo',now(),'林地新增按钮');
+insert into sys_menu values('13090203', '林地修改','130902', 3, '#','menuItem','F', '0', 'village:forestlandInfo:edit', '#','itbo',now(),'itbo',now(),'林地修改按钮');
+insert into sys_menu values('13090204', '林地删除','130902', 4, '#','menuItem','F', '0', 'village:forestlandInfo:remove', '#','itbo',now(),'itbo',now(),'林地删除按钮');
+
+insert into sys_menu values('130903','房屋管理','1309','3','/village/houseInfo','menuItem','C','0','village:houseInfo:view','fa fa-address-book','itbo',now(),'itbo',now(),'房屋管理展示菜单');
+insert into sys_menu values('13090301', '房屋查询','130903', 1, '#','menuItem','F', '0', 'village:houseInfo:list', '#','itbo',now(),'itbo',now(),'房屋查询按钮');
+insert into sys_menu values('13090302', '房屋新增','130903', 2, '#','menuItem','F', '0', 'village:houseInfo:add', '#','itbo',now(),'itbo',now(),'房屋新增按钮');
+insert into sys_menu values('13090303', '房屋修改','130903', 3, '#','menuItem','F', '0', 'village:houseInfo:edit', '#','itbo',now(),'itbo',now(),'房屋修改按钮');
+insert into sys_menu values('13090304', '房屋删除','130903', 4, '#','menuItem','F', '0', 'village:houseInfo:remove', '#','itbo',now(),'itbo',now(),'房屋删除按钮');
+
+insert into sys_menu values('130904','村户管理','1309','4','/village/houseMemberInfo','menuItem','C','0','village:houseMemberInfo:view','fa fa-address-book','itbo',now(),'itbo',now(),'村户管理展示菜单');
+insert into sys_menu values('13090401', '村户查询','130904', 1, '#','menuItem','F', '0', 'village:houseMemberInfo:list', '#','itbo',now(),'itbo',now(),'村户查询按钮');
+insert into sys_menu values('13090402', '村户新增','130904', 2, '#','menuItem','F', '0', 'village:houseMemberInfo:add', '#','itbo',now(),'itbo',now(),'村户新增按钮');
+insert into sys_menu values('13090403', '村户修改','130904', 3, '#','menuItem','F', '0', 'village:houseMemberInfo:edit', '#','itbo',now(),'itbo',now(),'村户修改按钮');
+insert into sys_menu values('13090404', '村户删除','130904', 4, '#','menuItem','F', '0', 'village:houseMemberInfo:remove', '#','itbo',now(),'itbo',now(),'村户删除按钮');
+
+insert into sys_menu values('130905','耕地管理','1309','5','/village/plowlandInfo','menuItem','C','0','village:plowlandInfo:view','fa fa-address-book','itbo',now(),'itbo',now(),'耕地管理展示菜单');
+insert into sys_menu values('13090501','耕地查询','130905', 1, '#','menuItem','F', '0', 'village:plowlandInfo:list', '#','itbo',now(),'itbo',now(),'耕地查询按钮');
+insert into sys_menu values('13090502','耕地新增','130905', 2, '#','menuItem','F', '0', 'village:plowlandInfo:add', '#','itbo',now(),'itbo',now(),'耕地新增按钮');
+insert into sys_menu values('13090503','耕地修改','130905', 3, '#','menuItem','F', '0', 'village:plowlandInfo:edit', '#','itbo',now(),'itbo',now(),'耕地修改按钮');
+insert into sys_menu values('13090504','耕地删除','130905', 4, '#','menuItem','F', '0', 'village:plowlandInfo:remove', '#','itbo',now(),'itbo',now(),'耕地删除按钮');
+
+insert into sys_menu values('130906','村组统计','1309','6','/village/villagegroupStatisticsInfo','menuItem','C','0','village:villagegroupStatisticsInfo:view','fa fa-address-book','itbo',now(),'itbo',now(),'村组统计展示菜单');
+insert into sys_menu values('13090601', '村组统计查询','130906', 1, '#','menuItem','F', '0', 'village:villagegroupStatisticsInfo:list', '#','itbo',now(),'itbo',now(),'村组统计查询按钮');
+insert into sys_menu values('13090602', '村组统计新增','130906', 2, '#','menuItem','F', '0', 'village:villagegroupStatisticsInfo:add', '#','itbo',now(),'itbo',now(),'村组统计新增按钮');
+insert into sys_menu values('13090603', '村组统计修改','130906', 3, '#','menuItem','F', '0', 'village:villagegroupStatisticsInfo:edit', '#','itbo',now(),'itbo',now(),'村组统计修改按钮');
+insert into sys_menu values('13090604', '村组统计删除','130906', 4, '#','menuItem','F', '0', 'village:villagegroupStatisticsInfo:remove', '#','itbo',now(),'itbo',now(),'村组统计删除按钮');
+
+insert into sys_menu values('14','融媒体','0','4','#','menuItem','M','0','','fa fa-bullhorn','itbo',now(),'itbo',now(),'融媒体管理目录');
+
+insert into sys_menu values('1401','应急广播','14','1','#','menuItem','M','0','','fa fa-bullhorn','itbo',now(),'itbo',now(),'应急广播管理目录');
+
+insert into sys_menu values('140101','终端信息','1401','1','#','menuItem','M','0','','fa fa-bullhorn','itbo',now(),'itbo',now(),'终端信息管理目录');
+
+insert into sys_menu values('14010101','分组管理','140101','1','/broad/areaGrouping','menuItem','C','0','broad:areagrouping:view','fa fa-address-book','itbo',now(),'itbo',now(),'分组管理展示菜单');
+insert into sys_menu values('1401010101', '分组管理列表','14010101', 1, '/broad/areaGrouping/list','menuItem','F', '0', 'broad:areaGrouping:list', '#','itbo',now(),'itbo',now(),'分组管理列表按钮');
+insert into sys_menu values('1401010102', '分组管理新增','14010101', 2, '#','menuItem','F', '0', 'broad:areaGrouping:add', '#', 'itbo',now(),'itbo',now(),'分组管理新增按钮');
+insert into sys_menu values('1401010103', '分组管理编辑','14010101', 3, '#','menuItem','F', '0', 'broad:areaGrouping:edit', '#','itbo',now(),'itbo',now(),'分组管理编辑按钮');
+insert into sys_menu values('1401010104', '分组管理删除','14010101', 4, '#','menuItem','F', '0', 'broad:areagrouping:remove', '#','itbo',now(),'itbo',now(),'分组管理删除按钮');
+
+insert into sys_menu values('14010102','终端管理','140101','2','/broad/management','menuItem','C','0','broad:management:view','fa fa-address-book','itbo',now(),'itbo',now(),'终端管理展示菜单');
+insert into sys_menu values('1401010201', '终端管理查询','14010102', 1, '#','menuItem','F', '0', 'broad:management:list', '#','itbo',now(),'itbo',now(),'终端管理查询按钮');
+insert into sys_menu values('1401010202', '终端管理新增','14010102', 2, '#','menuItem','F', '0', 'broad:management:add', '#','itbo',now(),'itbo',now(),'终端管理新增按钮');
+insert into sys_menu values('1401010203', '终端管理修改','14010102', 3, '#','menuItem','F', '0', 'broad:management:edit', '#','itbo',now(),'itbo',now(),'终端管理修改按钮');
+insert into sys_menu values('1401010204', '终端管理删除','14010102', 4, '#','menuItem','F', '0', 'broad:management:remove', '#','itbo',now(),'itbo',now(),'终端管理删除按钮');
+
+insert into sys_menu values('14010103','特殊分组管理','140101','3','/broad/tempgroup','menuItem','C','0','broad:tempgroup:view','fa fa-address-book','itbo',now(),'itbo',now(),'特殊分组管理展示菜单');
+insert into sys_menu values('1401010301', '特殊分组查询','14010103', 1, '#','menuItem','F', '0', 'broad:tempgroup:list', '#','itbo',now(),'itbo',now(),'特殊分组查询按钮');
+insert into sys_menu values('1401010302', '特殊分组新增','14010103', 2, '#','menuItem','F', '0', 'broad:tempgroup:add', '#','itbo',now(),'itbo',now(),'特殊分组新增按钮');
+insert into sys_menu values('1401010303', '特殊分组修改','14010103', 3, '#','menuItem','F', '0', 'broad:tempgroup:edit', '#','itbo',now(),'itbo',now(),'特殊分组修改按钮');
+insert into sys_menu values('1401010304', '特殊分组删除','14010103', 4, '#','menuItem','F', '0', 'broad:tempgroup:remove', '#','itbo',now(),'itbo',now(),'特殊分组删除按钮');
+
+insert into sys_menu values('140102','运行管理','1401','2','#','menuItem','M','0','','fa fa-bullhorn','itbo',now(),'itbo',now(),'运行管理目录');
+
+insert into sys_menu values('14010201','流量管理','140102','1','/broad/traffic','menuItem','C','0','broad:traffic:view','fa fa-address-book','itbo',now(),'itbo',now(),'流量管理展示菜单');
+insert into sys_menu values('1401020101', '流量查询','14010201', 1, '#','menuItem','F', '0', 'broad:traffic:list', '#','itbo',now(),'itbo',now(),'流量查询按钮');
+insert into sys_menu values('1401020102', '流量新增','14010201', 2, '#','menuItem','F', '0', 'broad:traffic:add', '#','itbo',now(),'itbo',now(),'流量新增按钮');
+insert into sys_menu values('1401020103', '流量修改','14010201', 3, '#','menuItem','F', '0', 'broad:traffic:edit', '#','itbo',now(),'itbo',now(),'流量修改按钮');
+insert into sys_menu values('1401020104', '流量删除','14010201', 4, '#','menuItem','F', '0', 'broad:traffic:remove', '#','itbo',now(),'itbo',now(),'流量删除按钮');
+
+insert into sys_menu values('14010202','地图管理','140102','2','/broad/map/list','menuItem','C','0','broad:map:view','fa fa-address-book','itbo',now(),'itbo',now(),'地图管理展示菜单');
+insert into sys_menu values('1401020201', '地图查询','14010202', 1, '#','menuItem','F', '0', 'broad:map:list', '#','itbo',now(),'itbo',now(),'地图查询按钮');
+
+insert into sys_menu values('14010203','终端信息设置','140102','3','/broad/terminalset','menuItem','C','0','broad:terminalset:view','fa fa-address-book','itbo',now(),'itbo',now(),'终端信息设置展示菜单');
+insert into sys_menu values('1401020301', '终端信息查询','14010203', 1, '#','menuItem','F', '0', 'broad:terminalset:list', '#','itbo',now(),'itbo',now(),'终端信息查询按钮');
+insert into sys_menu values('1401020302', '终端信息新增','14010203', 2, '#','menuItem','F', '0', 'broad:terminalset:add', '#','itbo',now(),'itbo',now(),'终端信息新增按钮');
+insert into sys_menu values('1401020303', '终端信息修改','14010203', 3, '#','menuItem','F', '0', 'broad:terminalset:edit', '#','itbo',now(),'itbo',now(),'终端信息修改按钮');
+insert into sys_menu values('1401020304', '终端信息删除','14010203', 4, '#','menuItem','F', '0', 'broad:terminalset:remove', '#','itbo',now(),'itbo',now(),'终端信息删除按钮');
+
+insert into sys_menu values('14010204','维护记录','140102','4','/broad/maintain','menuItem','C','0','broad:maintain:view','fa fa-address-book','itbo',now(),'itbo',now(),'维护记录展示菜单');
+insert into sys_menu values('1401020401', '终端维护记录查询','14010204', 1, '#','menuItem','F', '0', 'broad:maintain:list', '#','itbo',now(),'itbo',now(),'终端维护记录查询按钮');
+insert into sys_menu values('1401020402', '终端维护记录新增','14010204', 2, '#','menuItem','F', '0', 'broad:maintain:add', '#','itbo',now(),'itbo',now(),'终端维护记录新增按钮');
+insert into sys_menu values('1401020403', '终端维护记录修改','14010204', 3, '#','menuItem','F', '0', 'broad:maintain:edit', '#','itbo',now(),'itbo',now(),'终端维护记录修改按钮');
+insert into sys_menu values('1401020404', '终端维护记录删除','14010204', 4, '#','menuItem','F', '0', 'broad:maintain:remove', '#','itbo',now(),'itbo',now(),'终端维护记录删除按钮');
+
+insert into sys_menu values('14010205','维护申请','140102','5','/broad/maintainApply','menuItem','C','0','broad:maintainApply:view','fa fa-address-book','itbo',now(),'itbo',now(),'维护申请展示菜单');
+insert into sys_menu values('1401020501', '维护申请查询','14010205', 1, '#','menuItem','F', '0', 'broad:maintainApply:list', '#','itbo',now(),'itbo',now(),'维护申请查询按钮');
+insert into sys_menu values('1401020502', '维护申请新增','14010205', 2, '#','menuItem','F', '0', 'broad:maintainApply:add', '#','itbo',now(),'itbo',now(),'维护申请新增按钮');
+insert into sys_menu values('1401020503', '维护申请修改','14010205', 3, '#','menuItem','F', '0', 'broad:maintainApply:edit', '#','itbo',now(),'itbo',now(),'维护申请修改按钮');
+insert into sys_menu values('1401020504', '维护申请删除','14010205', 4, '#','menuItem','F', '0', 'broad:maintainApply:remove', '#','itbo',now(),'itbo',now(),'维护申请删除按钮');
+
+insert into sys_menu values('140103','节目管理','1401','3','#','menuItem','M','0','','fa fa-bullhorn','itbo',now(),'itbo',now(),'节目管理目录');
+
+insert into sys_menu values('14010301','节目库管理','140103','1','/broad/per','menuItem','C','0','broad:per:view','fa fa-address-book','itbo',now(),'itbo',now(),'节目库管理展示菜单');
+insert into sys_menu values('1401030101', '节目单查询','14010301', 1, '#','menuItem','F', '0', 'broad:per:list', '#','itbo',now(),'itbo',now(),'节目单查询按钮');
+insert into sys_menu values('1401030102', '节目单新增','14010301', 2, '#','menuItem','F', '0', 'broad:per:add', '#','itbo',now(),'itbo',now(),'节目单新增按钮');
+insert into sys_menu values('1401030103', '节目单修改','14010301', 3, '#','menuItem','F', '0', 'broad:per:edit', '#','itbo',now(),'itbo',now(),'节目单修改按钮');
+insert into sys_menu values('1401030104', '节目单删除','14010301', 4, '#','menuItem','F', '0', 'broad:per:remove', '#','itbo',now(),'itbo',now(),'节目单删除按钮');
+
+insert into sys_menu values('14010302','节目录制管理','140103','2','#','menuItem','M','0','','fa fa-bullhorn','itbo',now(),'itbo',now(),'节目录制管理目录');
+
+insert into sys_menu values('1401030201','节目申请','14010302','1','/broad/proreApply','menuItem','C','0','broad:proreApply:list','fa fa-address-book','itbo',now(),'itbo',now(),'节目申请展示菜单');
+insert into sys_menu values('140103020101', '节目申请查询','1401030201', 1, '#','menuItem','F', '0', 'broad:proreApply:list', '#','itbo',now(),'itbo',now(),'节目申请查询按钮');
+insert into sys_menu values('140103020102', '节目申请新增','1401030201', 2, '#','menuItem','F', '0', 'broad:proreApply:add', '#','itbo',now(),'itbo',now(),'节目申请新增按钮');
+insert into sys_menu values('140103020103', '节目申请修改','1401030201', 3, '#','menuItem','F', '0', 'broad:proreApply:edit', '#','itbo',now(),'itbo',now(),'节目申请修改按钮');
+insert into sys_menu values('140103020104', '节目申请删除','1401030201', 4, '#','menuItem','F', '0', 'broad:proreApply:remove', '#','itbo',now(),'itbo',now(),'节目申请删除按钮');
+
+insert into sys_menu values('1401030202','节目审听','14010302','2','/broad/prolisten','menuItem','C','0','broad:prolisten:view','fa fa-address-book','itbo',now(),'itbo',now(),'节目审听展示菜单');
+insert into sys_menu values('140103020201', '节目审听查询','1401030202', 1, '#','menuItem','F', '0', 'broad:prolisten:list', '#','itbo',now(),'itbo',now(),'节目审听查询按钮');
+insert into sys_menu values('140103020202', '节目审听新增','1401030202', 2, '#','menuItem','F', '0', 'broad:prolisten:add', '#','itbo',now(),'itbo',now(),'节目审听新增按钮');
+insert into sys_menu values('140103020203', '节目审听修改','1401030202', 3, '#','menuItem','F', '0', 'broad:prolisten:edit', '#','itbo',now(),'itbo',now(),'节目审听修改按钮');
+insert into sys_menu values('140103020204', '节目审听删除','1401030202', 4, '#','menuItem','F', '0', 'broad:prolisten:remove', '#','itbo',now(),'itbo',now(),'节目审听删除按钮');
+
+insert into sys_menu values('14010303','节目播出单管理','140103','3','/broad/proSinmanage','menuItem','C','0','broad:proSinmanage:view','fa fa-address-book','itbo',now(),'itbo',now(),'节目播出单管理展示菜单');
+insert into sys_menu values('1401030301','节目播出单查询','14010303', 1, '#','menuItem','F', '0', 'broad:proSinmanage:list', '#','itbo',now(),'itbo',now(),'节目播出单查询按钮');
+insert into sys_menu values('1401030302','节目播出单新增','14010303', 2, '#','menuItem','F', '0', 'broad:proSinmanage:add', '#','itbo',now(),'itbo',now(),'节目播出单新增按钮');
+insert into sys_menu values('1401030303','节目播出单修改','14010303', 3, '#','menuItem','F', '0', 'broad:proSinmanage:edit', '#','itbo',now(),'itbo',now(),'节目播出单修改按钮');
+insert into sys_menu values('1401030304','节目播出单删除','14010303', 4, '#','menuItem','F', '0', 'broad:proSinmanage:remove', '#','itbo',now(),'itbo',now(),'节目播出单删除按钮');
+
+insert into sys_menu values('14010304','转播频道管理','140103','4','/broad/proChamanage','menuItem','C','0','broad:proChamanage:view','fa fa-address-book','itbo',now(),'itbo',now(),'转播频道管理展示菜单');
+insert into sys_menu values('1401030401','转播频道查询','14010304', 1, '#','menuItem','F', '0', 'broad:proChamanage:list', '#','itbo',now(),'itbo',now(),'转播频道查询按钮');
+insert into sys_menu values('1401030402','转播频道新增','14010304', 2, '#','menuItem','F', '0', 'broad:proChamanage:add', '#','itbo',now(),'itbo',now(),'转播频道新增按钮');
+insert into sys_menu values('1401030403','转播频道修改','14010304', 3, '#','menuItem','F', '0', 'broad:proChamanage:edit', '#','itbo',now(),'itbo',now(),'转播频道修改按钮');
+insert into sys_menu values('1401030404','转播频道删除','14010304', 4, '#','menuItem','F', '0', 'broad:proChamanage:remove', '#','itbo',now(),'itbo',now(),'转播频道删除按钮');
+
+insert into sys_menu values('14010305','紧急播出单管理','140103','5','/broad/proSinmanage/wproSinmanage','menuItem','C','0','broad:proSinmanage:viewwarning','fa fa-address-book','itbo',now(),'itbo',now(),'紧急播出单管理展示菜单');
+insert into sys_menu values('1401030501','紧急播出单查询','14010305', 1, '#','menuItem','F', '0', 'broad:proSinmanage:list', '#','itbo',now(),'itbo',now(),'紧急播出单查询按钮');
+insert into sys_menu values('1401030502','紧急播出单新增','14010305', 2, '#','menuItem','F', '0', 'broad:proSinmanage:add', '#','itbo',now(),'itbo',now(),'紧急播出单新增按钮');
+insert into sys_menu values('1401030503','紧急播出单修改','14010305', 3, '#','menuItem','F', '0', 'broad:proSinmanage:edit', '#','itbo',now(),'itbo',now(),'紧急播出单修改按钮');
+insert into sys_menu values('1401030504','紧急播出单删除','14010305', 4, '#','menuItem','F', '0', 'broad:proSinmanage:remove', '#','itbo',now(),'itbo',now(),'紧急播出单删除按钮');
+
+insert into sys_menu values('14010306','短信播出','140103','6','/broad/message','menuItem','C','0','broad:message:view','fa fa-address-book','itbo',now(),'itbo',now(),'短信播出展示菜单');
+insert into sys_menu values('1401030601','短信播出查询','14010306', 1, '#','menuItem','F', '0', 'broad:message:list', '#','itbo',now(),'itbo',now(),'短信播出查询按钮');
+insert into sys_menu values('1401030602','短信播出新增','14010306', 2, '#','menuItem','F', '0', 'broad:message:add', '#','itbo',now(),'itbo',now(),'短信播出新增按钮');
+insert into sys_menu values('1401030603','短信播出修改','14010306', 3, '#','menuItem','F', '0', 'broad:message:edit', '#','itbo',now(),'itbo',now(),'短信播出修改按钮');
+insert into sys_menu values('1401030604','短信播出删除','14010306', 4, '#','menuItem','F', '0', 'broad:message:remove', '#','itbo',now(),'itbo',now(),'短信播出删除按钮');
+
+insert into sys_menu values('14010307','特种节目管理','140103','7','/broad/spec','menuItem','C','0','broad:spec:view','fa fa-address-book','itbo',now(),'itbo',now(),'特种节目管理展示菜单');
+insert into sys_menu values('1401030701','特种节目查询','14010307', 1, '#','menuItem','F', '0', 'broad:spec:list', '#','itbo',now(),'itbo',now(),'特种节目查询按钮');
+insert into sys_menu values('1401030702','特种节目新增','14010307', 2, '#','menuItem','F', '0', 'broad:spec:add', '#','itbo',now(),'itbo',now(),'特种节目新增按钮');
+insert into sys_menu values('1401030703','特种节目修改','14010307', 3, '#','menuItem','F', '0', 'broad:spec:edit', '#','itbo',now(),'itbo',now(),'特种节目修改按钮');
+insert into sys_menu values('1401030704','特种节目删除','14010307', 4, '#','menuItem','F', '0', 'broad:spec:remove', '#','itbo',now(),'itbo',now(),'特种节目删除按钮');
+
+insert into sys_menu values('140104','流媒体直播','1401','4','#','menuItem','M','0','','fa fa-bullhorn','itbo',now(),'itbo',now(),'流媒体直播管理目录');
+
+insert into sys_menu values('14010401','流媒体直播','140104','1','/broad/live/view','menuItem','C','0','broad:live:view','fa fa-address-book','itbo',now(),'itbo',now(),'流媒体直播展示菜单');
+insert into sys_menu values('1401040101','打开直播','14010401', 1, '#','menuItem','F', '0', 'broad:live:open', '#','itbo',now(),'itbo',now(),'打开直播按钮');
+insert into sys_menu values('1401040102','关闭直播','14010401', 2, '#','menuItem','F', '0', 'broad:live:close', '#','itbo',now(),'itbo',now(),'关闭直播按钮');
+insert into sys_menu values('1401040103','选择终端','14010401', 3, '#','menuItem','F', '0', 'broad:live:select', '#','itbo',now(),'itbo',now(),'选择终端按钮');
+insert into sys_menu values('1401040104','选择文件','14010401', 4, '#','menuItem','F', '0', 'broad:live:selectfile', '#','itbo',now(),'itbo',now(),'选择文件按钮');
+insert into sys_menu values('1401040105','播放文件','14010401', 5, '#','menuItem','F', '0', 'broad:live:playfile', '#','itbo',now(),'itbo',now(),'播放文件按钮');
+insert into sys_menu values('1401040106','停止播放文件','14010401', 6, '#','menuItem','F', '0', 'broad:live:closefile', '#','itbo',now(),'itbo',now(),'停止播放文件按钮');
+
+insert into sys_menu values('140105','人员管理','1401','5','#','menuItem','M','0','','fa fa-bullhorn','itbo',now(),'itbo',now(),'人员管理目录');
+
+insert into sys_menu values('14010501','终端管理员','140105','1','/broad/terminaladmin','menuItem','C','0','broad:terminaladmin:view','fa fa-address-book','itbo',now(),'itbo',now(),'终端管理员展示菜单');
+insert into sys_menu values('1401050101','终端管理员查询','14010501', 1, '#','menuItem','F', '0', 'broad:terminaladmin:list', '#','itbo',now(),'itbo',now(),'终端管理员查询按钮');
+insert into sys_menu values('1401050102','终端管理员新增','14010501', 2, '#','menuItem','F', '0', 'broad:terminaladmin:add', '#','itbo',now(),'itbo',now(),'终端管理员新增按钮');
+insert into sys_menu values('1401050103','终端管理员修改','14010501', 3, '#','menuItem','F', '0', 'broad:terminaladmin:edit', '#','itbo',now(),'itbo',now(),'终端管理员修改按钮');
+insert into sys_menu values('1401050104','终端管理员删除','14010501', 4, '#','menuItem','F', '0', 'broad:terminaladmin:remove', '#','itbo',now(),'itbo',now(),'终端管理员删除按钮');
+
+insert into sys_menu values('14010502','用户管理信息','140105','2','/broad/broaduser','menuItem','C','0','broad:broaduser:view','fa fa-address-book','itbo',now(),'itbo',now(),'用户管理信息展示菜单');
+insert into sys_menu values('1401050201', '广播用户查询','14010502', 1, '#','menuItem','F', '0', 'broad:broaduser:list', '#','itbo',now(),'itbo',now(),'广播用户查询按钮');
+insert into sys_menu values('1401050202', '广播用户新增','14010502', 2, '#','menuItem','F', '0', 'broad:broaduser:add', '#','itbo',now(),'itbo',now(),'广播用户新增按钮');
+insert into sys_menu values('1401050203', '广播用户修改','14010502', 3, '#','menuItem','F', '0', 'broad:broaduser:edit', '#','itbo',now(),'itbo',now(),'广播用户修改按钮');
+insert into sys_menu values('1401050204', '广播用户删除','14010502', 4, '#','menuItem','F', '0', 'broad:broaduser:remove', '#','itbo',now(),'itbo',now(),'广播用户删除按钮');
+
+insert into sys_menu values('1402','LED信息发布','14','2','#','menuItem','M','0','','fa fa-bullhorn','itbo',now(),'itbo',now(),'LED信息发布管理目录');
+
+insert into sys_menu values('140201','LED信息管理','1402','1','/broad/ledinfo','menuItem','C','0','broad:ledinfo:view','fa fa-address-book','itbo',now(),'itbo',now(),'LED信息管理展示菜单');
+insert into sys_menu values('14020101', '广播用户查询','140201', 1, '#','menuItem','F', '0', 'broad:ledinfo:list','#','itbo',now(),'itbo',now(),'广播用户查询按钮');
+insert into sys_menu values('14020102', '广播用户新增','140201', 2, '#','menuItem','F', '0', 'broad:ledinfo:add','#','itbo',now(),'itbo',now(),'广播用户新增按钮');
+insert into sys_menu values('14020103', '广播用户修改','140201', 3, '#','menuItem','F', '0', 'broad:ledinfo:edit','#','itbo',now(),'itbo',now(),'广播用户修改按钮');
+insert into sys_menu values('14020104', '广播用户删除','140201', 4, '#','menuItem','F', '0', 'broad:ledinfo:remove','#','itbo',now(),'itbo',now(),'广播用户删除按钮');
+
+insert into sys_menu values('1403','短信微信推送','14','3','#','menuItem','M','0','','fa fa-bullhorn','itbo',now(),'itbo',now(),'短信微信推送管理目录');
+
+insert into sys_menu values('140301','信息推送管理','1403','1','/broad/infopush','menuItem','C','0','broad:infopush:view','fa fa-address-book','itbo',now(),'itbo',now(),'短信微信信息推送管理展示菜单');
+insert into sys_menu values('14030101', '信息推送查询','140301', 1, '#','menuItem','F', '0', 'broad:infopush:list','#','itbo',now(),'itbo',now(),'信息推送查询按钮');
+insert into sys_menu values('14030102', '信息推送新增','140301', 2, '#','menuItem','F', '0', 'broad:infopush:add','#','itbo',now(),'itbo',now(),'信息推送新增按钮');
+insert into sys_menu values('14030103', '信息推送修改','140301', 3, '#','menuItem','F', '0', 'broad:infopush:edit','#','itbo',now(),'itbo',now(),'信息推送修改按钮');
+insert into sys_menu values('14030104', '信息推送删除','140301', 4, '#','menuItem','F', '0', 'broad:infopush:remove','#','itbo',now(),'itbo',now(),'信息推送删除按钮');
+
+insert into sys_menu values('1404','联合推送','14','4','#','menuItem','M','0','','fa fa-bullhorn','itbo',now(),'itbo',now(),'联合推送管理目录');
+
+insert into sys_menu values('140401','信息同步推送','1404','1','/broad/syndpush','menuItem','C','0','broad:syndpush:view','fa fa-address-book','itbo',now(),'itbo',now(),'信息同步推送管理展示菜单');
+insert into sys_menu values('14040101', '信息同步推送查询','140401', 1, '#','menuItem','F', '0', 'broad:syndpush:list','#','itbo',now(),'itbo',now(),'信息同步推送查询按钮');
+insert into sys_menu values('14040102', '信息同步推送新增','140401', 2, '#','menuItem','F', '0', 'broad:syndpush:add','#','itbo',now(),'itbo',now(),'信息同步推送新增按钮');
+insert into sys_menu values('14040103', '信息同步推送修改','140401', 3, '#','menuItem','F', '0', 'broad:syndpush:edit','#','itbo',now(),'itbo',now(),'信息同步推送修改按钮');
+insert into sys_menu values('14040104', '信息同步推送删除','140401', 4, '#','menuItem','F', '0', 'broad:syndpush:remove','#','itbo',now(),'itbo',now(),'信息同步推送删除按钮');
+
+insert into sys_menu values('1405','人群定向推送','14','5','#','menuItem','M','0','','fa fa-bullhorn','itbo',now(),'itbo',now(),'人群定向推送管理目录');
+
+insert into sys_menu values('140501','信息定向推送','1405','1','/broad/personpush','menuItem','C','0','broad:personpush:view','fa fa-address-book','itbo',now(),'itbo',now(),'信息定向推送管理展示菜单');
+insert into sys_menu values('14050101', '信息定向推送查询','140501', 1, '#','menuItem','F', '0', 'broad:personpush:list','#','itbo',now(),'itbo',now(),'信息定向推送查询按钮');
+insert into sys_menu values('14050102', '信息定向推送新增','140501', 2, '#','menuItem','F', '0', 'broad:personpush:add','#','itbo',now(),'itbo',now(),'信息定向推送新增按钮');
+insert into sys_menu values('14050103', '信息定向推送修改','140501', 3, '#','menuItem','F', '0', 'broad:personpush:edit','#','itbo',now(),'itbo',now(),'信息定向推送修改按钮');
+insert into sys_menu values('14050104', '信息定向推送删除','140501', 4, '#','menuItem','F', '0', 'broad:personpush:remove','#','itbo',now(),'itbo',now(),'信息定向推送删除按钮');
+
+insert into sys_menu values('15','物联网','0','5','#','menuItem','M','0','','fa fa-male','itbo',now(),'itbo',now(),'物联网管理目录');
+
+insert into sys_menu values('1501','终端管理','15','1','#','menuItem','M','0','','fa fa-male','itbo',now(),'itbo',now(),'物联网终端管理目录');
+
+insert into sys_menu values('150101','LED终端','1501','1','/iot/ledinfo','menuItem','C','0','iot:ledinfo:view','fa fa-address-book','itbo',now(),'itbo',now(),'LED终端管理展示菜单');
+insert into sys_menu values('15010101', 'LED终端查询','150101', 1, '#','menuItem','F', '0', 'iot:ledinfo:list','#','itbo',now(),'itbo',now(),'LED终端查询按钮');
+insert into sys_menu values('15010102', 'LED终端新增','150101', 2, '#','menuItem','F', '0', 'iot:ledinfo:add','#','itbo',now(),'itbo',now(),'LED终端新增按钮');
+insert into sys_menu values('15010103', 'LED终端修改','150101', 3, '#','menuItem','F', '0', 'iot:ledinfo:edit','#','itbo',now(),'itbo',now(),'LED终端修改按钮');
+insert into sys_menu values('15010104', 'LED终端删除','150101', 4, '#','menuItem','F', '0', 'iot:ledinfo:remove','#','itbo',now(),'itbo',now(),'LED终端删除按钮');
+
+insert into sys_menu values('150102','广播终端','1501','2','/iot/broadinfo','menuItem','C','0','iot:broadinfo:view','fa fa-address-book','itbo',now(),'itbo',now(),'广播终端管理展示菜单');
+insert into sys_menu values('15010201', '广播终端查询','150102', 1, '#','menuItem','F', '0', 'iot:broadinfo:list','#','itbo',now(),'itbo',now(),'广播终端查询按钮');
+insert into sys_menu values('15010202', '广播终端新增','150102', 2, '#','menuItem','F', '0', 'iot:broadinfo:add','#','itbo',now(),'itbo',now(),'广播终端新增按钮');
+insert into sys_menu values('15010203', '广播终端修改','150102', 3, '#','menuItem','F', '0', 'iot:broadinfo:edit','#','itbo',now(),'itbo',now(),'广播终端修改按钮');
+insert into sys_menu values('15010204', '广播终端删除','150102', 4, '#','menuItem','F', '0', 'iot:broadinfo:remove','#','itbo',now(),'itbo',now(),'广播终端删除按钮');
+
+insert into sys_menu values('150103','安防终端','1501','3','/iot/safeinfo','menuItem','C','0','iot:safeinfo:view','fa fa-address-book','itbo',now(),'itbo',now(),'安防终端管理展示菜单');
+insert into sys_menu values('15010301', '安防终端查询','150103', 1, '#','menuItem','F', '0', 'iot:safeinfo:list','#','itbo',now(),'itbo',now(),'安防终端查询按钮');
+insert into sys_menu values('15010302', '安防终端新增','150103', 2, '#','menuItem','F', '0', 'iot:safeinfo:add','#','itbo',now(),'itbo',now(),'安防终端新增按钮');
+insert into sys_menu values('15010303', '安防终端修改','150103', 3, '#','menuItem','F', '0', 'iot:safeinfo:edit','#','itbo',now(),'itbo',now(),'安防终端修改按钮');
+insert into sys_menu values('15010304', '安防终端删除','150103', 4, '#','menuItem','F', '0', 'iot:safeinfo:remove','#','itbo',now(),'itbo',now(),'安防终端删除按钮');
+
+insert into sys_menu values('150104','能源管理终端','1501','4','/iot/energyinfo','menuItem','C','0','iot:energyinfo:view','fa fa-address-book','itbo',now(),'itbo',now(),'能源管理终端展示菜单');
+insert into sys_menu values('15010401', '能源管理终端查询','150104', 1, '#','menuItem','F', '0', 'iot:energyinfo:list','#','itbo',now(),'itbo',now(),'能源管理终端查询按钮');
+insert into sys_menu values('15010402', '能源管理终端新增','150104', 2, '#','menuItem','F', '0', 'iot:energyinfo:add','#','itbo',now(),'itbo',now(),'能源管理终端新增按钮');
+insert into sys_menu values('15010403', '能源管理终端修改','150104', 3, '#','menuItem','F', '0', 'iot:energyinfo:edit','#','itbo',now(),'itbo',now(),'能源管理终端修改按钮');
+insert into sys_menu values('15010404', '能源管理终端删除','150104', 4, '#','menuItem','F', '0', 'iot:energyinfo:remove','#','itbo',now(),'itbo',now(),'能源管理终端删除按钮');
+
+insert into sys_menu values('150105','水泵管理','1501','5','/iot/pumpinfo','menuItem','C','0','iot:pumpinfo:view','fa fa-address-book','itbo',now(),'itbo',now(),'水泵终端展示菜单');
+insert into sys_menu values('15010501', '水泵管理查询','150105', 1, '#','menuItem','F', '0', 'iot:pumpinfo:list','#','itbo',now(),'itbo',now(),'水泵管理查询按钮');
+insert into sys_menu values('15010502', '水泵管理新增','150105', 2, '#','menuItem','F', '0', 'iot:pumpinfo:add','#','itbo',now(),'itbo',now(),'水泵管理新增按钮');
+insert into sys_menu values('15010503', '水泵管理修改','150105', 3, '#','menuItem','F', '0', 'iot:pumpinfo:edit','#','itbo',now(),'itbo',now(),'水泵管理修改按钮');
+insert into sys_menu values('15010504', '水泵管理删除','150105', 4, '#','menuItem','F', '0', 'iot:pumpinfo:remove','#','itbo',now(),'itbo',now(),'水泵管理删除按钮');
+
+insert into sys_menu values('150106','路灯管理','1501','6','/iot/lightinfo','menuItem','C','0','iot:lightinfo:view','fa fa-address-book','itbo',now(),'itbo',now(),'路灯管理展示菜单');
+insert into sys_menu values('15010601', '路灯管理查询','150106', 1, '#','menuItem','F', '0', 'iot:lightinfo:list','#','itbo',now(),'itbo',now(),'路灯管理查询按钮');
+insert into sys_menu values('15010602', '路灯管理新增','150106', 2, '#','menuItem','F', '0', 'iot:lightinfo:add','#','itbo',now(),'itbo',now(),'路灯管理新增按钮');
+insert into sys_menu values('15010603', '路灯管理修改','150106', 3, '#','menuItem','F', '0', 'iot:lightinfo:edit','#','itbo',now(),'itbo',now(),'路灯管理修改按钮');
+insert into sys_menu values('15010604', '路灯管理删除','150106', 4, '#','menuItem','F', '0', 'iot:lightinfo:remove','#','itbo',now(),'itbo',now(),'路灯管理删除按钮');
+
+insert into sys_menu values('150107','沙盘管理','1501','7','/iot/sandboxinfo','menuItem','C','0','iot:sandinfo:view','fa fa-address-book','itbo',now(),'itbo',now(),'沙盘管理展示菜单');
+insert into sys_menu values('15010701', '沙盘管理查询','150107', 1, '#','menuItem','F', '0', 'iot:sandinfo:list','#','itbo',now(),'itbo',now(),'沙盘管理查询按钮');
+insert into sys_menu values('15010702', '沙盘管理新增','150107', 2, '#','menuItem','F', '0', 'iot:sandinfo:add','#','itbo',now(),'itbo',now(),'沙盘管理新增按钮');
+insert into sys_menu values('15010703', '沙盘管理修改','150107', 3, '#','menuItem','F', '0', 'iot:sandinfo:edit','#','itbo',now(),'itbo',now(),'沙盘管理修改按钮');
+insert into sys_menu values('15010704', '沙盘管理删除','150107', 4, '#','menuItem','F', '0', 'iot:sandinfo:remove','#','itbo',now(),'itbo',now(),'沙盘管理删除按钮');
+
+insert into sys_menu values('150108','广告牌管理','1501','8','/iot/boardinfo','menuItem','C','0','iot:boardinfo:view','fa fa-address-book','itbo',now(),'itbo',now(),'广告牌管理展示菜单');
+insert into sys_menu values('15010801', '广告牌管理查询','150108', 1, '#','menuItem','F', '0', 'iot:boardinfo:list','#','itbo',now(),'itbo',now(),'广告牌管理查询按钮');
+insert into sys_menu values('15010802', '广告牌管理新增','150108', 2, '#','menuItem','F', '0', 'iot:boardinfo:add','#','itbo',now(),'itbo',now(),'广告牌管理新增按钮');
+insert into sys_menu values('15010803', '广告牌管理修改','150108', 3, '#','menuItem','F', '0', 'iot:boardinfo:edit','#','itbo',now(),'itbo',now(),'广告牌管理修改按钮');
+insert into sys_menu values('15010804', '广告牌管理删除','150108', 4, '#','menuItem','F', '0', 'iot:boardinfo:remove','#','itbo',now(),'itbo',now(),'广告牌管理删除按钮');
+
+insert into sys_menu values('150109','山洪灾害监测','1501','9','/iot/floodinfo','menuItem','C','0','iot:floodinfo:view','fa fa-address-book','itbo',now(),'itbo',now(),'山洪灾害监测展示菜单');
+insert into sys_menu values('15010901', '山洪监测查询','150109', 1, '#','menuItem','F', '0', 'iot:floodinfo:list','#','itbo',now(),'itbo',now(),'山洪监测查询按钮');
+insert into sys_menu values('15010902', '山洪监测新增','150109', 2, '#','menuItem','F', '0', 'iot:floodinfo:add','#','itbo',now(),'itbo',now(),'山洪监测新增按钮');
+insert into sys_menu values('15010903', '山洪监测修改','150109', 3, '#','menuItem','F', '0', 'iot:floodinfo:edit','#','itbo',now(),'itbo',now(),'山洪监测修改按钮');
+insert into sys_menu values('15010904', '山洪监测删除','150109', 4, '#','menuItem','F', '0', 'iot:floodinfo:remove','#','itbo',now(),'itbo',now(),'山洪监测删除按钮');
+
+insert into sys_menu values('150110','火灾探头终端','1501','10','/iot/fireinfo','menuItem','C','0','iot:fireinfo:view','fa fa-address-book','itbo',now(),'itbo',now(),'火灾探头终端展示菜单');
+insert into sys_menu values('15011001', '火灾探头终端查询','150110', 1, '#','menuItem','F', '0', 'iot:fireinfo:list','#','itbo',now(),'itbo',now(),'火灾探头终端查询按钮');
+insert into sys_menu values('15011002', '火灾探头终端新增','150110', 2, '#','menuItem','F', '0', 'iot:fireinfo:add','#','itbo',now(),'itbo',now(),'火灾探头终端新增按钮');
+insert into sys_menu values('15011003', '火灾探头终端修改','150110', 3, '#','menuItem','F', '0', 'iot:fireinfo:edit','#','itbo',now(),'itbo',now(),'火灾探头终端修改按钮');
+insert into sys_menu values('15011004', '火灾探头终端删除','150110', 4, '#','menuItem','F', '0', 'iot:fireinfo:remove','#','itbo',now(),'itbo',now(),'火灾探头终端删除按钮');
+
+insert into sys_menu values('150111','环境监测终端','1501','11','/iot/environinfo','menuItem','C','0','iot:environinfo:view','fa fa-address-book','itbo',now(),'itbo',now(),'环境监测终端展示菜单');
+insert into sys_menu values('15011101', '环境监测终端查询','150111', 1, '#','menuItem','F', '0', 'iot:environinfo:list','#','itbo',now(),'itbo',now(),'环境监测终端查询按钮');
+insert into sys_menu values('15011102', '环境监测终端新增','150111', 2, '#','menuItem','F', '0', 'iot:environinfo:add','#','itbo',now(),'itbo',now(),'环境监测终端新增按钮');
+insert into sys_menu values('15011103', '环境监测终端修改','150111', 3, '#','menuItem','F', '0', 'iot:environinfo:edit','#','itbo',now(),'itbo',now(),'环境监测终端修改按钮');
+insert into sys_menu values('15011104', '环境监测终端删除','150111', 4, '#','menuItem','F', '0', 'iot:environinfo:remove','#','itbo',now(),'itbo',now(),'环境监测终端删除按钮');
+
+insert into sys_menu values('150112','水质监测','1501','12','/iot/waterinfo','menuItem','C','0','iot:waterinfo:view','fa fa-address-book','itbo',now(),'itbo',now(),'水质监测展示菜单');
+insert into sys_menu values('15011201', '水质监测查询','150112', 1, '#','menuItem','F', '0', 'iot:waterinfo:list','#','itbo',now(),'itbo',now(),'水质监测查询按钮');
+insert into sys_menu values('15011202', '水质监测新增','150112', 2, '#','menuItem','F', '0', 'iot:waterinfo:add','#','itbo',now(),'itbo',now(),'水质监测新增按钮');
+insert into sys_menu values('15011203', '水质监测修改','150112', 3, '#','menuItem','F', '0', 'iot:waterinfo:edit','#','itbo',now(),'itbo',now(),'水质监测修改按钮');
+insert into sys_menu values('15011204', '水质监测删除','150112', 4, '#','menuItem','F', '0', 'iot:waterinfo:remove','#','itbo',now(),'itbo',now(),'水质监测删除按钮');
+
+insert into sys_menu values('150113','土壤监测','1501','13','/iot/soilinfo','menuItem','C','0','iot:soilinfo:view','fa fa-address-book','itbo',now(),'itbo',now(),'土壤监测展示菜单');
+insert into sys_menu values('15011301', '土壤监测查询','150113', 1, '#','menuItem','F', '0', 'iot:soilinfo:list','#','itbo',now(),'itbo',now(),'土壤监测查询按钮');
+insert into sys_menu values('15011302', '土壤监测新增','150113', 2, '#','menuItem','F', '0', 'iot:soilinfo:add','#','itbo',now(),'itbo',now(),'土壤监测新增按钮');
+insert into sys_menu values('15011303', '土壤监测修改','150113', 3, '#','menuItem','F', '0', 'iot:soilinfo:edit','#','itbo',now(),'itbo',now(),'土壤监测修改按钮');
+insert into sys_menu values('15011304', '土壤监测删除','150113', 4, '#','menuItem','F', '0', 'iot:soilinfo:remove','#','itbo',now(),'itbo',now(),'土壤监测删除按钮');
+
+insert into sys_menu values('150114','排污监测','1501','14','/iot/blowdowninfo','menuItem','C','0','iot:blowdowninfo:view','fa fa-address-book','itbo',now(),'itbo',now(),'排污监测展示菜单');
+insert into sys_menu values('15011401', '排污监测查询','150114', 1, '#','menuItem','F', '0', 'iot:blowdowninfo:list','#','itbo',now(),'itbo',now(),'排污监测查询按钮');
+insert into sys_menu values('15011402', '排污监测新增','150114', 2, '#','menuItem','F', '0', 'iot:blowdowninfo:add','#','itbo',now(),'itbo',now(),'排污监测新增按钮');
+insert into sys_menu values('15011403', '排污监测修改','150114', 3, '#','menuItem','F', '0', 'iot:blowdowninfo:edit','#','itbo',now(),'itbo',now(),'排污监测修改按钮');
+insert into sys_menu values('15011404', '排污监测删除','150114', 4, '#','menuItem','F', '0', 'iot:blowdowninfo:remove','#','itbo',now(),'itbo',now(),'排污监测删除按钮');
+
+insert into sys_menu values('150115','气象监测','1501','15','/iot/meteorinfo','menuItem','C','0','iot:meteorinfo:view','fa fa-address-book','itbo',now(),'itbo',now(),'气象监测展示菜单');
+insert into sys_menu values('15011501', '气象监测查询','150115', 1, '#','menuItem','F', '0', 'iot:meteorinfo:list','#','itbo',now(),'itbo',now(),'气象监测查询按钮');
+insert into sys_menu values('15011502', '气象监测新增','150115', 2, '#','menuItem','F', '0', 'iot:meteorinfo:add','#','itbo',now(),'itbo',now(),'气象监测新增按钮');
+insert into sys_menu values('15011503', '气象监测修改','150115', 3, '#','menuItem','F', '0', 'iot:meteorinfo:edit','#','itbo',now(),'itbo',now(),'气象监测修改按钮');
+insert into sys_menu values('15011504', '气象监测删除','150115', 4, '#','menuItem','F', '0', 'iot:meteorinfo:remove','#','itbo',now(),'itbo',now(),'气象监测删除按钮');
+
+insert into sys_menu values('16','系统监控','0','6','#','menuItem','M','0','','fa fa-microchip','itbo',now(),'itbo',now(),'系统监控管理目录');
+
+insert into sys_menu values('1601','在线用户','16','1','/monitor/online','menuItem','C','0','monitor:online:view','fa fa-address-book','itbo',now(),'itbo',now(),'在线用户管理展示菜单');
+insert into sys_menu values('160101', '在线查询','1601', 1, '#','menuItem','F', '0', 'monitor:online:list', '#','itbo',now(),'itbo',now(),'在线查询按钮');
+insert into sys_menu values('160102', '批量强退','1601', 2, '#','menuItem','F', '0', 'monitor:online:batchForceLogout', '#','itbo',now(),'itbo',now(),'批量强退按钮');
+insert into sys_menu values('160103', '单条强退','1601', 3, '#','menuItem','F', '0', 'monitor:online:forceLogout', '#','itbo',now(),'itbo',now(),'单条强退按钮');
+
+insert into sys_menu values('1602','定时任务','16','2','/monitor/job','menuItem','C','0','monitor:job:view','fa fa-address-book','itbo',now(),'itbo',now(),'定时任务管理展示菜单');
+insert into sys_menu values('160201', '任务查询','1602', 1, '#','menuItem','F', '0', 'monitor:job:list', '#','itbo',now(),'itbo',now(),'任务查询按钮');
+insert into sys_menu values('160202', '任务新增','1602', 2, '#','menuItem','F', '0', 'monitor:job:add', '#','itbo',now(),'itbo',now(),'任务新增按钮');
+insert into sys_menu values('160203', '任务修改','1602', 3, '#','menuItem','F', '0', 'monitor:job:edit', '#','itbo',now(),'itbo',now(),'任务删除按钮');
+insert into sys_menu values('160204', '任务删除','1602', 4, '#','menuItem','F', '0', 'monitor:job:remove', '#','itbo',now(),'itbo',now(),'任务删除按钮');
+insert into sys_menu values('160205', '状态修改','1602', 5, '#','menuItem','F', '0', 'monitor:job:changeStatus', '#','itbo',now(),'itbo',now(),'状态修改按钮');
+insert into sys_menu values('160206', '任务详细','1602', 6, '#','menuItem','F', '0', 'monitor:job:detail', '#','itbo',now(),'itbo',now(),'任务详细按钮');
+insert into sys_menu values('160207', '任务导出','1602', 7, '#','menuItem','F', '0', 'monitor:job:export', '#','itbo',now(),'itbo',now(),'任务导出按钮');
+
+insert into sys_menu values('1603','数据监控','16','3','/monitor/data','menuItem','C','0','monitor:data:view','fa fa-address-book','itbo',now(),'itbo',now(),'数据监控管理展示菜单');
+
+insert into sys_menu values('1604','服务监控','16','4','/monitor/server','menuItem','C','0','monitor:server:view','fa fa-address-book','itbo',now(),'itbo',now(),'服务监控管理展示菜单');
+
+insert into sys_menu values('17','系统管理','0','7','#','menuItem','M','0','','fa fa-bullhorn','itbo',now(),'itbo',now(),'系统工具管理目录');
+
+insert into sys_menu values('1701','部门管理','17','1','/system/dept','menuItem','C','0','system:dept:view','fa fa-address-book','itbo',now(),'itbo',now(),'部门管理展示菜单');
+insert into sys_menu values('170101','部门查询','1701',1, '#','menuItem','F', '0', 'system:dept:list', '#','itbo',now(),'itbo',now(),'部门查询按钮');
+insert into sys_menu values('170102','部门新增','1701',2, '#','menuItem','F', '0', 'system:dept:add', '#','itbo',now(),'itbo',now(),'部门新增按钮');
+insert into sys_menu values('170103','部门修改','1701',3, '#','menuItem','F', '0', 'system:dept:edit', '#','itbo',now(),'itbo',now(),'部门修改按钮');
+insert into sys_menu values('170104','部门删除','1701',4, '#','menuItem','F', '0', 'system:dept:remove', '#','itbo',now(),'itbo',now(),'部门删除按钮');
+
+insert into sys_menu values('1702','岗位管理','17','2','/system/post','menuItem','C','0','system:post:view','fa fa-address-book','itbo',now(),'itbo',now(),'岗位管理展示菜单');
+insert into sys_menu values('170201', '岗位查询','1702', 1, '#','menuItem','F', '0', 'system:post:list', '#','itbo',now(),'itbo',now(),'岗位查询按钮');
+insert into sys_menu values('170202', '岗位新增','1702', 2, '#','menuItem','F', '0', 'system:post:add', '#','itbo',now(),'itbo',now(),'岗位新增按钮');
+insert into sys_menu values('170203', '岗位修改','1702', 3, '#','menuItem','F', '0', 'system:post:edit', '#','itbo',now(),'itbo',now(),'岗位修改按钮');
+insert into sys_menu values('170204', '岗位删除','1702', 4, '#','menuItem','F', '0', 'system:post:remove', '#','itbo',now(),'itbo',now(),'岗位删除按钮');
+insert into sys_menu values('170205', '岗位导出','1702', 5, '#','menuItem','F', '0', 'system:post:export', '#','itbo',now(),'itbo',now(),'岗位导出按钮');
+
+insert into sys_menu values('1703','字典管理','17','3','/system/dict','menuItem','C','0','system:dict:view','fa fa-address-book','itbo',now(),'itbo',now(),'字典管理展示菜单');
+insert into sys_menu values('170301', '字典查询','1703', 1, '#','menuItem','F', '0', 'system:dict:list', '#','itbo',now(),'itbo',now(),'字典查询按钮');
+insert into sys_menu values('170302', '字典新增','1703', 2, '#','menuItem','F', '0', 'system:dict:add', '#','itbo',now(),'itbo',now(),'字典新增按钮');
+insert into sys_menu values('170303', '字典修改','1703', 3, '#','menuItem','F', '0', 'system:dict:edit', '#','itbo',now(),'itbo',now(),'字典修改按钮');
+insert into sys_menu values('170304', '字典删除','1703', 4, '#','menuItem','F', '0', 'system:dict:remove', '#','itbo',now(),'itbo',now(),'字典删除按钮');
+insert into sys_menu values('170305', '字典导出','1703', 5, '#','menuItem','F', '0', 'system:dict:export', '#','itbo',now(),'itbo',now(),'字典导出按钮');
+
+insert into sys_menu values('1704','参数设置','17','4','/system/config','menuItem','C','0','system:config:view','fa fa-address-book','itbo',now(),'itbo',now(),'参数设置展示菜单');
+insert into sys_menu values('170401', '参数查询','1704', 1, '#','menuItem','F', '0', 'system:config:list','#','itbo',now(),'itbo',now(),'参数查询按钮');
+insert into sys_menu values('170402', '参数新增','1704', 2, '#','menuItem','F', '0', 'system:config:add','#','itbo',now(),'itbo',now(),'参数新增按钮');
+insert into sys_menu values('170403', '参数修改','1704', 3, '#','menuItem','F', '0', 'system:config:edit','#','itbo',now(),'itbo',now(),'参数修改按钮');
+insert into sys_menu values('170404', '参数删除','1704', 4, '#','menuItem','F', '0', 'system:config:remove','#','itbo',now(),'itbo',now(),'参数删除按钮');
+insert into sys_menu values('170405', '参数导出','1704', 5, '#','menuItem','F', '0', 'system:config:export','#','itbo',now(),'itbo',now(),'参数导出按钮');
+
+insert into sys_menu values('1705','通知公告','17','5','/system/notice','menuItem','C','0','system:notice:view','fa fa-address-book','itbo',now(),'itbo',now(),'通知公告展示菜单');
+insert into sys_menu values('170501', '公告查询','1705', 1, '#','menuItem', 'F', '0', 'system:notice:list', '#','itbo',now(),'itbo',now(),'公告查询按钮');
+insert into sys_menu values('170502', '公告新增','1705', 2, '#','menuItem', 'F', '0', 'system:notice:add', '#','itbo',now(),'itbo',now(),'公告新增按钮');
+insert into sys_menu values('170503', '公告修改','1705', 3, '#','menuItem', 'F', '0', 'system:notice:edit', '#','itbo',now(),'itbo',now(),'公告修改按钮');
+insert into sys_menu values('170504', '公告删除','1705', 4, '#','menuItem', 'F', '0', 'system:notice:remove', '#','itbo',now(),'itbo',now(),'公告删除按钮');
+
+insert into sys_menu values('1706','日志管理','17','6','#','menuItem','M','0','','fa fa-bullhorn','itbo',now(),'itbo',now(),'日志管理目录');
+
+insert into sys_menu values('170601','操作日志','1706','1','/monitor/operlog','menuItem','C','0','monitor:operlog:view','fa fa-address-book','itbo',now(),'itbo',now(),'操作日志管理展示菜单');
+insert into sys_menu values('17060101','操作查询','170601', 1, '#','menuItem','F', '0', 'monitor:operlog:list', '#','itbo',now(),'itbo',now(),'操作查询按钮');
+insert into sys_menu values('17060102','操作删除','170601', 2, '#','menuItem','F', '0', 'monitor:operlog:remove', '#','itbo',now(),'itbo',now(),'操作删除按钮');
+insert into sys_menu values('17060103','详细信息','170601', 3, '#','menuItem','F', '0', 'monitor:operlog:detail', '#','itbo',now(),'itbo',now(),'详细信息按钮');
+insert into sys_menu values('17060104','日志导出','170601', 4, '#','menuItem','F', '0', 'monitor:operlog:export', '#','itbo',now(),'itbo',now(),'日志导出按钮');
+
+insert into sys_menu values('170602','登录日志','1706','2','/monitor/logininfor','menuItem','C','0','monitor:logininfor:view','fa fa-address-book','itbo',now(),'itbo',now(),'登录日志管理展示菜单');
+insert into sys_menu values('17060201', '登录查询','170602', 1, '#','menuItem','F', '0', 'monitor:logininfor:list', '#','itbo',now(),'itbo',now(),'登录查询按钮');
+insert into sys_menu values('17060202', '登录删除','170602', 2, '#','menuItem','F', '0', 'monitor:logininfor:remove', '#','itbo',now(),'itbo',now(),'登录删除按钮');
+insert into sys_menu values('17060203', '日志导出','170602', 3, '#','menuItem','F', '0', 'monitor:logininfor:export', '#','itbo',now(),'itbo',now(),'日志导出按钮');
+
+insert into sys_menu values('18','系统工具','0','8','#','menuItem','M','0','', 'fa fa-male','itbo',now(),'itbo',now(),'系统工具管理目录');
+
+insert into sys_menu values('1801','表单构建','18','1','/tool/build','menuItem','C','0','tool:build:view','fa fa-address-book','itbo',now(),'itbo',now(),'表单构建展示菜单');
+
+insert into sys_menu values('1802','代码生成','18','2','/tool/gen','menuItem','C','0','tool:gen:view','fa fa-address-book','itbo',now(),'itbo',now(),'代码生成展示菜单');
+insert into sys_menu values('180201', '生成查询','1802', 1, '#','menuItem','F', '0', 'tool:gen:list', '#','itbo',now(),'itbo',now(),'生成查询按钮');
+insert into sys_menu values('180202', '生成代码','1802', 2, '#','menuItem','F', '0', 'tool:gen:code', '#','itbo',now(),'itbo',now(),'生成代码按钮');
